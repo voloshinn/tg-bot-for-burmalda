@@ -1,22 +1,22 @@
 import './App.css'
-import { useEffect } from 'react';
+import ControlPanel from './components/ControlPanel/ControlPanel';
+import Header from './components/Header/Header';
+import InfoBlock from './components/InfoBlock/InfoBlock';
+import MinesPanel from './components/MinesPanel/MinesPanel';
+import { useTelegram } from './hooks/useTelegram';
 
-const tg = window.Telegram.WebApp;
+
 
 export default function App() {
 
-  useEffect(() => {
-    tg.ready();
-  }, [])
-
-  const onClose = () => {
-    tg.close()
-  }
+  const {onClose} = useTelegram
 
   return (
     <>
-      work
-      <button onClick={onClose}>Закрыть</button>
+      <Header />
+      <InfoBlock />
+      <MinesPanel />
+      <ControlPanel />
     </>
   )
 }
