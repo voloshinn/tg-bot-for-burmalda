@@ -77,6 +77,9 @@ export default function Mines() {
                 transition: "background-color 0.3s ease, transform 0.3s ease",
                 transform: isStar ? "scale(1.2)" : "scale(1)",
                 fontSize: isStar ? "2rem" : "1rem", // Increase star size
+                boxShadow: isStar
+                  ? "0px 7px 14px rgba(0, 0, 0, 0), 0px 7px 10px rgba(0, 0, 0, 0)"
+                  : "0px 7px 14px rgba(0, 0, 0, 0.4), 0px 7px 10px rgba(0, 0, 0, 0.2)",
               }}
             >
               {isStar ? "⭐" : ""}
@@ -89,7 +92,7 @@ export default function Mines() {
         style={{
           marginTop: "20px",
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-around",
           alignItems: "center",
           gap: "20px",
         }}
@@ -98,23 +101,24 @@ export default function Mines() {
           onClick={() => handleSignalChange(-2)}
           disabled={signalCount === 1 || isAnimating}
           style={{
-            padding: "10px 20px",
-            fontSize: "1.5rem",
+            padding: "0.7rem 1.4rem",
+            fontSize: "2rem",
             borderRadius: "10px",
             backgroundColor: "#186060",
             color: "white",
             border: "none",
             cursor: "pointer",
+            boxShadow:
+              "0px 7px 14px rgba(0, 0, 0, 0.4), 0px 7px 10px rgba(0, 0, 0, 0.2)",
           }}
         >
           -
         </button>
         <span
           style={{
-            fontSize: "1.5rem",
+            fontSize: "2rem",
             fontWeight: "bold",
             padding: "10px",
-            border: "1px solid #ccc",
             borderRadius: "10px",
           }}
         >
@@ -124,13 +128,15 @@ export default function Mines() {
           onClick={() => handleSignalChange(2)}
           disabled={signalCount === 7 || isAnimating}
           style={{
-            padding: "10px 20px",
-            fontSize: "1.5rem",
+            padding: "0.7rem 1.4rem",
+            fontSize: "2rem",
             borderRadius: "10px",
             backgroundColor: "#186060",
             color: "white",
             border: "none",
             cursor: "pointer",
+            boxShadow:
+              "0px 7px 14px rgba(0, 0, 0, 0.4), 0px 7px 10px rgba(0, 0, 0, 0.2)",
           }}
         >
           +
@@ -141,14 +147,16 @@ export default function Mines() {
         onClick={handleGetSignal}
         disabled={isAnimating}
         style={{
+          width: "50vh",
+          height: "7vh",
           marginTop: "20px",
-          padding: "15px 30px",
-          fontSize: "1.5rem",
+          fontSize: "1.7rem",
           borderRadius: "10px",
           backgroundColor: "teal",
           color: "white",
           border: "none",
           cursor: "pointer",
+          // boxShadow: "0px 30px 80px -20px rgba(1, 1, 1, 0.25);",
         }}
       >
         GET SIGNAL

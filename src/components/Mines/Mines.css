@@ -29,6 +29,7 @@
 }
 
 .grid-item {
+  box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.4), 0px 7px 10px rgba(0, 0, 0, 0.2);
   background-color: teal;
   display: flex;
   align-items: center;
@@ -42,20 +43,40 @@
   margin: 20px;
   border-radius: 10px;
   width: 50vh;
-  height: 7vh;
+  height: 9vh;
   background-color: #1d2530;
+  display: flex;
+  justify-content: space-between;
 }
 
 .get-signal {
-  background-color: #d56100;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+  width: "50vh";
+  margin-top: "20px";
+  padding: "15px 30px";
+  font-size: "1.5rem";
+  border-radius: "10px";
+  background-color: "teal";
+  color: "white";
+  border: "none";
+  cursor: "pointer";
+  box-shadow: "0px 30px 80px -20px rgba(255, 255, 255, 0.25);";
 }
 
 .get-signal:hover {
   background-color: darkcyan;
+}
+
+button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #145c58; /* Темнее цвет */
+  transform: scale(0.98); /* Сделать кнопку немного меньше */
+  opacity: 0.7;
+}
+
+/* Дополнительный стиль для текста */
+button:disabled {
+  opacity: 0.5; /* Сделать кнопку полупрозрачной, когда она неактивна */
 }
