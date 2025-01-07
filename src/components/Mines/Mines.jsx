@@ -66,7 +66,18 @@ export default function Mines() {
 
   return (
     <div className="app">
-      <div className="grid-wrapper">
+      <div
+        className="grid-wrapper"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "50vh",
+          height: "50vh",
+          backgroundColor: "#1d2530",
+          borderRadius: "10px",
+        }}
+      >
         <div className="grid">
           {grid.map((isStar, index) => (
             <div
@@ -91,6 +102,10 @@ export default function Mines() {
         className="controls"
         style={{
           marginTop: "20px",
+          borderRadius: "10px",
+          width: "50vh",
+          height: "5rem",
+          backgroundColor: "#1d2530",
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
@@ -148,7 +163,7 @@ export default function Mines() {
         disabled={isAnimating}
         style={{
           width: "50vh",
-          height: "7vh",
+          height: "4rem",
           marginTop: "20px",
           fontSize: "1.7rem",
           borderRadius: "10px",

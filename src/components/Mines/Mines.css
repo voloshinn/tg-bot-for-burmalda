@@ -9,16 +9,6 @@
   justify-content: center;
 }
 
-.grid-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50vh;
-  height: 50vh;
-  background-color: #1d2530;
-  border-radius: 10px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -37,16 +27,6 @@
   font-size: 24px;
   color: white;
   border-radius: 5px;
-}
-
-.controls {
-  margin: 20px;
-  border-radius: 10px;
-  width: 50vh;
-  height: 9vh;
-  background-color: #1d2530;
-  display: flex;
-  justify-content: space-between;
 }
 
 .get-signal {
@@ -78,5 +58,5 @@ button:hover {
 
 /* Дополнительный стиль для текста */
 button:disabled {
-  opacity: 0.5; /* Сделать кнопку полупрозрачной, когда она неактивна */
+  opacity: 0.5;
 }
